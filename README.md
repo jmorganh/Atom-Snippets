@@ -1,1 +1,3 @@
-"# Atom-Snippets" 
+# Atom-Snippets
+
+## Snippets that use in Atom.io

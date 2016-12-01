@@ -1,0 +1,158 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+'.text.html':
+    'html starter':
+        'prefix': 'html'
+        'body': """<!DOCTYPE html>
+        <html>
+        \t<head>
+        \t\t<meta charset="utf-8">
+        \t\t<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        \t\t<meta name="viewport" content="width=device-width, initial-scale=1">
+        \t\t<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        \t\t<link rel="stylesheet" href="css/styles.css"/>
+        \t\t<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        \t\t<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        \t\t<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        \t\t<title>$1</title>
+        \t</head>
+        \t<body>
+        \t\t<h1>$1</h1>
+        \t</body>
+        </html>"""
+    'ng-boot Input text required':
+        'prefix': 'input-abitr'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+        \t<label for="$1">$2</label>
+        \t<input type="text" class="form-control" id="$1" placeholder="$2" name="$1" ng-model="inputForm.$3" ng-required= "$3"/>
+        \t<div class="requireAlert">
+        \t\t<p ng-show='requestForm.$1.$error.required'> required!</p>
+        \t</div>
+        </div>"""
+    'ng-boot Input text':
+        'prefix': 'input-abit'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+        \t<label for="$1">$2</label>
+        \t<input type="text" class="form-control" id="$1" placeholder="$1" name="$1" ng-model="inputForm.$1" ng-required= "false"/>
+        </div>"""
+    'ng-boot Input number required':
+        'prefix': 'input-abinr'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+        \t<label for="$1">$2</label>
+        \t<input type="number" class="form-control" id="$1" placeholder="$2" name="$1" ng-model="inputForm.$3" ng-required= "$3"/>
+        \t<div class="requireAlert">
+        \t\t<p ng-show='requestForm.$1.$error.required'> required!</p>
+        \t</div>
+        </div>"""
+    'ng-boot Input number':
+        'prefix': 'input-abin'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+        \t<label for="$1">$2</label>
+        \t<input type="number" class="form-control" id="$1" placeholder="$1" name="$1" ng-model="inputForm.$1" ng-required= "false"/>
+        </div>"""
+    'ng-boot Input date required':
+        'prefix': 'input-abidr'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+        \t<label for="$1">$2</label>
+        \t<input type="date" class="form-control" id="$1" placeholder="$2" name="$1" ng-model="inputForm.$3" ng-required= "$3"/>
+        \t<div class="requireAlert">
+        \t\t<p ng-show='requestForm.$1.$error.required'> required!</p>
+        \t</div>
+        </div>"""
+    'ng-boot Input date':
+        'prefix': 'input-abid'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+        \t<label for="$1">$2</label>
+        \t<input type="date" class="form-control" id="$1" placeholder="$1" name="$1" ng-model="inputForm.$1" ng-required= "false"/>
+        </div>"""
+    'ng-boot Input booleon required':
+        'prefix': 'input-abibr'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+        \t<label for="$1">$2</label>
+        \t<input type="booleon" class="form-control" id="$1" placeholder="$2" name="$1" ng-model="inputForm.$3" ng-required= "$3"/>
+        \t<div class="requireAlert">
+        \t\t<p ng-show='requestForm.$1.$error.required'> required!</p>
+        \t</div>
+        </div>"""
+    'ng-boot Input booleon':
+        'prefix': 'input-abib'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+        \t<label for="$1">$2</label>
+        \t<input type="booleon" class="form-control" id="$1" placeholder="$1" name="$1" ng-model="inputForm.$1" ng-required= "false"/>
+        </div>"""
+    'CC-Input text w/message':
+        'prefix': 'ccit'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+            \t<label for="$1">$2</label>
+            \t<input type="text" class="form-control" id="$1" name="$1" placeholder="$1" ng-model="inputForm.$1" ng-minlength="" ng-maxlength="" ng-required= "true"/>
+            \t<div class="requireAlert" ng-messages="myForm.$1.$error" role="alert"><div ng-messages-include="templates/error-messages.html"></div></div>
+        </div>"""
+    'CC-Input number w/message':
+        'prefix': 'ccin'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+            \t<label for="$1">$2</label>
+            \t<input type="number" class="form-control" id="$1" name="$1" placeholder="$1" ng-model="inputForm.$1" ng-minlength="" ng-maxlength="" ng-required= "true"/>
+            \t<div class="requireAlert" ng-messages="myForm.$1.$error" role="alert"><div ng-messages-include="templates/error-messages.html"></div></div>
+        </div>"""
+    'CC-Input date w/message':
+        'prefix': 'ccid'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+            \t<label for="$1">$2</label>
+            \t<input type="date" class="form-control" id="$1" name="$1" placeholder="$1" ng-model="inputForm.$1" ng-minlength="" ng-maxlength="" ng-required= "true"/>
+            \t<div class="requireAlert" ng-messages="myForm.$1.$error" role="alert"><div ng-messages-include="templates/error-messages.html"></div></div>
+        </div>"""
+    'CC-Input booleon w/message':
+        'prefix': 'ccib'
+        'body': """<div class="form-group col-sm-6 col-md-4 col-lg-3">
+            \t<label for="$1">$2</label>
+            \t<input type="booleon" class="form-control" id="$1" name="$1" placeholder="$1" ng-model="inputForm.$1" ng-minlength="" ng-maxlength="" ng-required= "true"/>
+            \t<div class="requireAlert" ng-messages="myForm.$1.$error" role="alert"><div ng-messages-include="templates/error-messages.html"></div></div>
+        </div>
+        $2"""
+    'ng-boot table':
+        'prefix': 'tabler-abtable'
+        'body': """<h3>$1</h3>
+                    <b>ID:</b> $2<br><br>
+                <table class="table">
+                    <thead>
+                        <caption>$1
+                        <div class="pull-right">
+                        <button class="btn btn-primary" href="" ui-sref="$3">Add $1</button>
+                        </div>
+                        </caption>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="$4">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><a href="" ui-sref="">edit</a> | <a href="" ng-click="">delete</a> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                $7"""
